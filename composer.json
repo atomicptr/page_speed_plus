@@ -1,0 +1,37 @@
+{
+    "name": "atomicptr/pagespeed",
+    "type": "typo3-cms-extension",
+    "description": "Improve page speed by using common best practices and other shenanigans :).",
+    "keywords": [
+        "TYPO3 CMS",
+        "speed",
+        "pagespeed",
+        "HTTP2",
+        "server push",
+        "html",
+        "frontend",
+        "fast"
+    ],
+    "support": {
+        "issues": "https://github.com/atomicptr/pagespeed/issues"
+    },
+    "homepage": "https://github.com/atomicptr/pagespeed",
+    "authors": [
+        {
+            "name": "Christopher Kaster",
+            "email": "me@atomicptr.de",
+            "role": "Developer",
+            "homepage": "https://atomicptr.de"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0.0",
+        "wyrihaximus/html-compress": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atomicptr\\Pagespeed\\": "Classes"
+        }
+    }
+}

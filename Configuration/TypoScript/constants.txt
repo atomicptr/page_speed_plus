@@ -8,5 +8,11 @@ plugin.tx_pagespeed {
             # cat=plugin.tx_pagespeed/http2; type=int; label=Max Header Length
             maxHeaderLength = 8190
         }
+
+        # customsubcategory=htmlCompress=HTML Compress
+        htmlCompress {
+            # cat=plugin.tx_pagespeed/htmlCompress; type=boolean; label=Enable HTML Compression
+            enable = 1
+        }
     }
 }

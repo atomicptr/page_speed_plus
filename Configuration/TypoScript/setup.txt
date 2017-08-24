@@ -4,5 +4,9 @@ plugin.tx_pagespeed {
             serverPushEnable = {$plugin.tx_pagespeed.settings.http2.serverPushEnable}
             maxHeaderLength = {$plugin.tx_pagespeed.settings.http2.maxHeaderLength}
         }
+
+        htmlCompress {
+            enable = {$plugin.tx_pagespeed.settings.htmlCompress.enable}
+        }
     }
 }

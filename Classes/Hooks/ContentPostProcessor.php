@@ -7,6 +7,7 @@ use \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use \TYPO3\CMS\Extbase\Service\TypoScriptService;
 
 use \Atomicptr\Pagespeed\Utility\Http2ServerPush;
+use \Atomicptr\Pagespeed\Utility\HtmlCompress;
 
 class ContentPostProcessor {
 
@@ -29,11 +30,17 @@ class ContentPostProcessor {
         }
 
         $this->http2ServerPush = $this->objectManager->get(Http2ServerPush::class);
+        $this->htmlCompress = $this->objectManager->get(HtmlCompress::class);
     }
 
     private function process($cached) {
         if($this->settings["http2"]["serverPushEnable"]) {
             $this->http2ServerPush->render((int)$this->settings["http2"]["maxHeaderLength"]);
+        }
+
+        // this should stay at the end
+        if($this->settings["htmlCompress"]["enable"]) {
+            $this->htmlCompress->render();
         }
     }
 
