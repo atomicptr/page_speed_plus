@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
     "title" => "pagespeed",
-    "description" => "Improve page speed by using common best practices.",
+    "description" => "Improve page speed by using common best practices and other shenanigans :).",
     "category" => "misc",
     "author" => "Christopher Kaster",
     "author_email" => "me@atomicptr.de",
