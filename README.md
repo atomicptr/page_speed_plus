@@ -1,6 +1,6 @@
 # TYPO3 pagespeed
 
-Improve page speed by using common best practices and other shenanigans :).
+Improve your TYPO3 page speed by using common best practices and other shenanigans :).
 
 ## Features
 
