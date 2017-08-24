@@ -1,0 +1,12 @@
+plugin.tx_pagespeed {
+    settings {
+        # customsubcategory=http2=HTTP/2
+        http2 {
+            # cat=plugin.tx_pagespeed/http2; type=boolean; label=Enable HTTP/2 Server Push
+            serverPushEnable = 1
+
+            # cat=plugin.tx_pagespeed/http2; type=int; label=Max Header Length
+            maxHeaderLength = 8190
+        }
+    }
+}
