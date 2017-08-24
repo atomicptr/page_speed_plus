@@ -1,7 +1,7 @@
 {
     "name": "atomicptr/pagespeed",
     "type": "typo3-cms-extension",
-    "description": "Improve page speed by using common best practices and other shenanigans :).",
+    "description": "Improve TYPO3 page speed by using common best practices and other shenanigans :).",
     "keywords": [
         "TYPO3 CMS",
         "speed",
