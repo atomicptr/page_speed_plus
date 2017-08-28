@@ -1,6 +1,6 @@
 <?php
 
-namespace Atomicptr\Pagespeed\Utility;
+namespace Atomicptr\PagespeedPlus\Utility;
 
 class HtmlCompress {
 

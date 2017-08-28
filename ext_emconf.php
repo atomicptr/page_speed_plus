@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = array(
-    "title" => "pagespeed",
+    "title" => "pagespeed+",
     "description" => "Improve your TYPO3 page speed by using common best practices and other shenanigans :).",
     "category" => "misc",
     "author" => "Christopher Kaster",

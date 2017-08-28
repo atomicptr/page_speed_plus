@@ -1,5 +1,5 @@
 {
-    "name": "atomicptr/pagespeed",
+    "name": "atomicptr/pagespeed_plus",
     "type": "typo3-cms-extension",
     "description": "Improve your TYPO3 page speed by using common best practices and other shenanigans :).",
     "keywords": [
@@ -13,9 +13,9 @@
         "fast"
     ],
     "support": {
-        "issues": "https://github.com/atomicptr/pagespeed/issues"
+        "issues": "https://github.com/atomicptr/pagespeed_plus/issues"
     },
-    "homepage": "https://github.com/atomicptr/pagespeed",
+    "homepage": "https://github.com/atomicptr/pagespeed_plus",
     "authors": [
         {
             "name": "Christopher Kaster",
@@ -31,7 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Atomicptr\\Pagespeed\\": "Classes"
+            "Atomicptr\\PagespeedPlus\\": "Classes"
         }
     }
 }

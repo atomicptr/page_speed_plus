@@ -1,13 +1,13 @@
 <?php
 
-namespace Atomicptr\Pagespeed\Hooks;
+namespace Atomicptr\PagespeedPlus\Hooks;
 
 use \TYPO3\CMS\Extbase\Object\ObjectManager;
 use \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use \TYPO3\CMS\Extbase\Service\TypoScriptService;
 
-use \Atomicptr\Pagespeed\Utility\Http2ServerPush;
-use \Atomicptr\Pagespeed\Utility\HtmlCompress;
+use \Atomicptr\PagespeedPlus\Utility\Http2ServerPush;
+use \Atomicptr\PagespeedPlus\Utility\HtmlCompress;
 
 class ContentPostProcessor {
 
@@ -23,10 +23,10 @@ class ContentPostProcessor {
         $configuration = $this->configurationManager->getConfiguration(
             ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
 
-        if(isset($configuration["plugin."]["tx_pagespeed."])) {
+        if(isset($configuration["plugin."]["tx_pagespeed_plus."])) {
             $tsService = $this->objectManager->get(TypoScriptService::class);
             $this->settings = $tsService->convertTypoScriptArrayToPlainArray(
-                $configuration["plugin."]["tx_pagespeed."]["settings."]);
+                $configuration["plugin."]["tx_pagespeed_plus."]["settings."]);
         }
 
         $this->http2ServerPush = $this->objectManager->get(Http2ServerPush::class);

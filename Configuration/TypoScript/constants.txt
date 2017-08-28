@@ -1,17 +1,17 @@
-plugin.tx_pagespeed {
+plugin.tx_pagespeed_plus {
     settings {
         # customsubcategory=http2=HTTP/2
         http2 {
-            # cat=plugin.tx_pagespeed/http2; type=boolean; label=Enable HTTP/2 Server Push
+            # cat=plugin.tx_pagespeed_plus/http2; type=boolean; label=Enable HTTP/2 Server Push
             serverPushEnable = 1
 
-            # cat=plugin.tx_pagespeed/http2; type=int; label=Max Header Length
+            # cat=plugin.tx_pagespeed_plus/http2; type=int; label=Max Header Length
             maxHeaderLength = 8190
         }
 
         # customsubcategory=htmlCompress=HTML Compress
         htmlCompress {
-            # cat=plugin.tx_pagespeed/htmlCompress; type=boolean; label=Enable HTML Compression
+            # cat=plugin.tx_pagespeed_plus/htmlCompress; type=boolean; label=Enable HTML Compression
             enable = 1
         }
     }

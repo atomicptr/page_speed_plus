@@ -1,6 +1,6 @@
 <?php
 
-namespace Atomicptr\Pagespeed\Utility;
+namespace Atomicptr\PagespeedPlus\Utility;
 
 class Http2ServerPush {
     const MatchCss = "/<link.+?href=[\"'](.+?\.css.*?)[\"'].*?>/";
