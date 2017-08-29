@@ -6,7 +6,7 @@ Improve your TYPO3 page speed by using common best practices and other shenaniga
 
 * HTTP/2 Server Push
 * HTML Compression via [wyrihaximus/html-compress](https://github.com/WyriHaximus/HtmlCompress)
-* JavaScript Compression via []()
+* JavaScript Compression via [wikimedia/mediawiki JavaScriptMinifier.php](https://github.com/wikimedia/mediawiki/blob/master/includes/libs/JavaScriptMinifier.php)
 
 ## Configuration
 
