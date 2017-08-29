@@ -12,7 +12,7 @@ Improve your TYPO3 page speed by using common best practices and other shenaniga
 You can use the constants editor or just overwrite the TypoScript like this:
 
 ```typoscript
-plugin.tx_pagespeed_plus {
+plugin.tx_page_speed_plus {
     settings {
         http2 {
             serverPushEnable = 1
