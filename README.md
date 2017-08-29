@@ -23,12 +23,16 @@ plugin.tx_page_speed_plus {
         htmlCompress {
             enable = 1
         }
-
-        javascriptCompress {
-            enable = 1
-        }
     }
 }
+```
+
+### How to enable JavaScript compression
+
+You can enable JavaScript compression by adding this to your configuration:
+
+```typoscript
+config.compressJs = 1
 ```
 
 ## License

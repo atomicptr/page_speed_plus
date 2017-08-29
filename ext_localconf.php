@@ -8,10 +8,14 @@ if(TYPO3_COMPOSER_MODE !== true) {
     require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY)."vendor/autoload.php");
 }
 
+$conf = unserialize($_EXTCONF);
+
 // add JavaScript compress handler
-$GLOBALS["TYPO3_CONF_VARS"]["FE"]["jsCompressHandler"] =
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).
-        "/Classes/Hooks/JavaScriptCompressionHandler.php:Atomicptr\\PageSpeedPlus\\Hooks\\JavaScriptCompressionHandler->process";
+if($conf["enableCustomJavaScriptCompressor"]) {
+    $GLOBALS["TYPO3_CONF_VARS"]["FE"]["jsCompressHandler"] =
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).
+            "/Classes/Hooks/JavaScriptCompressionHandler.php:Atomicptr\\PageSpeedPlus\\Hooks\\JavaScriptCompressionHandler->process";
+}
 
 // register content post processors
 $GLOBALS["TYPO3_CONF_VARS"]["SC_OPTIONS"]["tslib/class.tslib_fe.php"]["contentPostProc-all"][] =
