@@ -6,17 +6,15 @@ use \TYPO3\CMS\Extbase\Object\ObjectManager;
 use \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use \TYPO3\CMS\Extbase\Service\TypoScriptService;
 
-use \Atomicptr\PageSpeedPlus\Utility\Http2ServerPush;
-use \Atomicptr\PageSpeedPlus\Utility\HtmlCompress;
+use Atomicptr\PageSpeedPlus\Resource\CustomResourceCompressor;
 
-class ContentPostProcessor {
+class JavaScriptCompressionHandler {
 
     protected $configurationManager;
     protected $objectManager;
     protected $settings;
 
-    protected $http2ServerPush;
-    protected $htmlCompress;
+    protected $resourceCompressor;
 
     public function __construct() {
         $this->objectManager = new ObjectManager();
@@ -30,30 +28,14 @@ class ContentPostProcessor {
                 $configuration["plugin."]["tx_page_speed_plus."]["settings."]);
         }
 
-        $this->http2ServerPush = $this->objectManager->get(Http2ServerPush::class);
-        $this->htmlCompress = $this->objectManager->get(HtmlCompress::class);
+        $this->resourceCompressor = $this->objectManager->get(CustomResourceCompressor::class);
     }
 
-    private function process($cached) {
-        if($this->settings["http2"]["serverPushEnable"]) {
-            $this->http2ServerPush->render((int)$this->settings["http2"]["maxHeaderLength"]);
-        }
+    public function process($args) {
+        $params = ["jsLibs", "jsFiles", "jsFooterFiles"];
 
-        // this should stay at the end
-        if($this->settings["htmlCompress"]["enable"]) {
-            $this->htmlCompress->render();
-        }
-    }
-
-    public function renderCachedPage() {
-        if(!$GLOBALS['TSFE']->isINTincScript()){
-            $this->process(true);
-        }
-    }
-
-    public function renderUncachedPage() {
-        if($GLOBALS['TSFE']->isINTincScript()){
-            $this->process(false);
+        foreach($params as $param) {
+            $args[$param] = $this->resourceCompressor->compressJsFiles($args[$param]);
         }
     }
 }
