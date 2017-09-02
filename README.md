@@ -35,6 +35,26 @@ You can enable JavaScript compression by adding this to your configuration:
 config.compressJs = 1
 ```
 
+## Other ways to improve my TYPO3 performance
+
+* Set your FE compression level to 9 in the install tool (and also add this to your .htaccess)
+    ```
+    <FilesMatch "\.js\.gzip$">
+        AddType "text/javascript" .gzip
+    </FilesMatch>
+    <FilesMatch "\.css\.gzip$">
+        AddType "text/css" .gzip
+    </FilesMatch>
+    AddEncoding gzip .gzip
+    ```
+* Tell the browser to keep the connection alive by adding this to your .htaccess:
+    ```
+    <ifModule mod_headers.c>
+        Header set Connection keep-alive
+    </ifModule>
+    ```
+
+
 ## License
 
 MIT
