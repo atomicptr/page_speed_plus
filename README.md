@@ -35,7 +35,7 @@ You can enable JavaScript compression by adding this to your configuration:
 config.compressJs = 1
 ```
 
-## Other ways to improve my website performance
+## Other ways to improve your website performance
 
 * Set your FE compression level to 9 in the install tool (and also add this to your .htaccess)
     ```
@@ -46,12 +46,6 @@ config.compressJs = 1
         AddType "text/css" .gzip
     </FilesMatch>
     AddEncoding gzip .gzip
-    ```
-* Tell the browser to keep the connection alive by adding this to your .htaccess:
-    ```
-    <ifModule mod_headers.c>
-        Header set Connection keep-alive
-    </ifModule>
     ```
 * Optimize your images, this is **REALLY important**!
 
