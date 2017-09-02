@@ -10,8 +10,10 @@ if(TYPO3_COMPOSER_MODE !== true) {
 
 $conf = unserialize($_EXTCONF);
 
+$confEnableCustomJSCompressor = $conf["enableCustomJavaScriptCompressor"];
+
 // add JavaScript compress handler
-if($conf["enableCustomJavaScriptCompressor"]) {
+if(!isset($confEnableCustomJSCompressor) || $confEnableCustomJSCompressor) {
     $GLOBALS["TYPO3_CONF_VARS"]["FE"]["jsCompressHandler"] =
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY).
             "/Classes/Hooks/JavaScriptCompressionHandler.php:Atomicptr\\PageSpeedPlus\\Hooks\\JavaScriptCompressionHandler->process";
