@@ -5,7 +5,7 @@ namespace Atomicptr\PageSpeedPlus\Resource;
 use TYPO3\CMS\Core\Utility\PathUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-use Atomicptr\PageSpeedPlus\Vendor\JavaScriptMinifier;
+use JShrink\Minifier;
 
 class CustomResourceCompressor extends \TYPO3\CMS\Core\Resource\ResourceCompressor {
 
@@ -35,6 +35,6 @@ class CustomResourceCompressor extends \TYPO3\CMS\Core\Resource\ResourceCompress
     }
 
      public function compressJsString($str) {
-        return JavaScriptMinifier::minify($str);
+        return Minifier::minify($str);
      }
 }

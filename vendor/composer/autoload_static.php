@@ -45,6 +45,16 @@ class ComposerStaticInit3f989909a30117e3f370dea4bd08f303
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'J' => 
+        array (
+            'JShrink' => 
+            array (
+                0 => __DIR__ . '/..' . '/tedivm/jshrink/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'CssAtCharsetParserPlugin' => __DIR__ . '/..' . '/natxet/CssMin/src/CssMin.php',
         'CssAtCharsetToken' => __DIR__ . '/..' . '/natxet/CssMin/src/CssMin.php',
@@ -123,6 +133,7 @@ class ComposerStaticInit3f989909a30117e3f370dea4bd08f303
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3f989909a30117e3f370dea4bd08f303::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3f989909a30117e3f370dea4bd08f303::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit3f989909a30117e3f370dea4bd08f303::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit3f989909a30117e3f370dea4bd08f303::$classMap;
 
         }, null, ClassLoader::class);

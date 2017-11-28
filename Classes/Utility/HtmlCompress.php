@@ -9,11 +9,11 @@ use WyriHaximus\HtmlCompress\Compressor\CssMinCompressor;
 use WyriHaximus\HtmlCompress\Compressor\CssMinifierCompressor;
 use WyriHaximus\HtmlCompress\Compressor\ReturnCompressor;
 
-use Atomicptr\PageSpeedPlus\Vendor\JavaScriptMinifier;
+use JShrink\Minifier;
 
 class JavaScriptMinifierCompressor extends Compressor {
     protected function execute($string) {
-        return JavaScriptMinifier::minify($string);
+        return Minifier::minify($string);
     }
 }
 
