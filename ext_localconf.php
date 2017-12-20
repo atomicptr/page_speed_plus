@@ -4,7 +4,7 @@ if(!defined("TYPO3_MODE")) {
     die("Access denied.");
 }
 
-if(TYPO3_COMPOSER_MODE !== true) {
+if(!defined("TYPO3_COMPOSER_MODE")) {
     require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY)."vendor/autoload.php");
 }
 
