@@ -2,6 +2,16 @@
 
 Improve your TYPO3 page speed by using common best practices and other shenanigans :).
 
+## Download
+
+[page\_speed\_plus on TER](https://extensions.typo3.org/extension/page_speed_plus/)
+
+Or just install it via composer:
+
+```shell
+$ composer require atomicptr/page_speed_plus
+```
+
 ## Features
 
 * HTTP/2 Server Push
@@ -49,6 +59,9 @@ config.compressJs = 1
     ```
 * Optimize your images, this is **REALLY important**!
 
+## Support me
+
+<a href="https://www.buymeacoffee.com/atomicptr" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## License
 

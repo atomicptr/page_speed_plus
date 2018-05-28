@@ -9,7 +9,6 @@ use JShrink\Minifier;
 
 class CustomResourceCompressor extends \TYPO3\CMS\Core\Resource\ResourceCompressor {
 
-
     // customized version of \TYPO3\CMS\Core\Resource\ResourceCompressor->compressJsFile
     public function compressJsFile($path) {
         $filename = GeneralUtility::resolveBackPath($this->rootPath.$this->getFilenameFromMainDir($path));

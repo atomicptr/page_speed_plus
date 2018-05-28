@@ -16,7 +16,6 @@ $confEnableCustomJSCompressor = $conf["enableCustomJavaScriptCompressor"];
 if(!isset($confEnableCustomJSCompressor) || $confEnableCustomJSCompressor) {
     $GLOBALS["TYPO3_CONF_VARS"]["FE"]["jsCompressHandler"] =
         \Atomicptr\PageSpeedPlus\Hooks\JavaScriptCompressionHandler::class."->process";
-
 }
 
 // register content post processors
