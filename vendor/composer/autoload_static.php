@@ -20,6 +20,11 @@ class ComposerStaticInit3f989909a30117e3f370dea4bd08f303
         array (
             'Patchwork\\' => 10,
         ),
+        'M' => 
+        array (
+            'MatthiasMullie\\PathConverter\\' => 29,
+            'MatthiasMullie\\Minify\\' => 22,
+        ),
         'A' => 
         array (
             'Atomicptr\\PageSpeedPlus\\' => 24,
@@ -39,6 +44,14 @@ class ComposerStaticInit3f989909a30117e3f370dea4bd08f303
         array (
             0 => __DIR__ . '/..' . '/patchwork/jsqueeze/src',
         ),
+        'MatthiasMullie\\PathConverter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/matthiasmullie/path-converter/src',
+        ),
+        'MatthiasMullie\\Minify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/matthiasmullie/minify/src',
+        ),
         'Atomicptr\\PageSpeedPlus\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Classes',
@@ -46,6 +59,13 @@ class ComposerStaticInit3f989909a30117e3f370dea4bd08f303
     );
 
     public static $prefixesPsr0 = array (
+        'Y' => 
+        array (
+            'YUI' => 
+            array (
+                0 => __DIR__ . '/..' . '/jalle19/php-yui-compressor/lib',
+            ),
+        ),
         'J' => 
         array (
             'JShrink' => 

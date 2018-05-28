@@ -10,16 +10,20 @@
  */
 namespace WyriHaximus\HtmlCompress\Compressor;
 
-abstract class Compressor implements CompressorInterface
+use MatthiasMullie\Minify\JS;
+
+/**
+ * Class MMMJSCompressor
+ *
+ * @package WyriHaximus\HtmlCompress\Compressor
+ */
+class MMMJSCompressor extends Compressor
 {
-    public function compress($source)
+    /**
+     * {@inheritdoc}
+     */
+    protected function execute($string)
     {
-        $result = $this->execute($source);
-
-        if (strlen($source) >= strlen($result)) {
-            return $result;
-        }
-
-        return $source;
+        return (new JS($string))->minify();
     }
 }
